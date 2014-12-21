@@ -1,40 +1,39 @@
- <RelativeLayout android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:id= "@+id/tabHost"
-    android:background="@drawable/b"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    >
-
-     <TextView
-         android:id="@+id/textView1"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentTop="true"
-         android:layout_centerHorizontal="true"
-         android:layout_marginTop="120dp"
-         android:textColor="#ff0000ff"
-         android:textSize="40dp"
-         android:text="Kunci Lyirics" />
-
-     <Button
-         android:id="@+id/lanjutkan"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentRight="true"
-         android:layout_below="@+id/textView1"
-         android:layout_marginTop="40dp"
-         android:onClick="lanjutkan"
-         android:text="Lanjutkan" />
-
-     <Button
-         android:id="@+id/keluar"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentRight="true"
-         android:layout_marginTop="10dp"
-         android:layout_below="@+id/lanjutkan"
-         android:text="Keluar" />
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:background="@drawable/b" 
+    android:layout_height="fill_parent" 
+    android:layout_width="fill_parent">
+    
+    <TextView 
+        android:id="@+id/textView1" 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        android:text="Kunci Lyirics" 
+        android:textSize="40dp" 
+        android:textColor="#ff0000ff" 
+        android:layout_marginTop="120dp" 
+        android:layout_centerHorizontal="true" 
+        android:layout_alignParentTop="true"/>
+    
+    <Button 
+        android:id="@+id/MainLanjutkan" 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Lanjutkan" 
+        android:layout_marginTop="40dp" 
+        android:layout_below="@+id/textView1" 
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"/>
+    
+    <Button 
+        android:id="@+id/MainKeluar"
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        android:text="Keluar" 
+        android:layout_marginTop="10dp" 
+        android:layout_below="@id/MainLanjutkan" 
+        android:layout_alignParentRight="true" 
+        android:layout_alignParentLeft="true"/>
 
 </RelativeLayout>

@@ -23,25 +23,48 @@ public final class R {
     public static final class drawable {
         public static final int b=0x7f020000;
         public static final int bb=0x7f020001;
-        public static final int musik=0x7f020002;
+        public static final int bbb=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int musik=0x7f020004;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000a;
-        public static final int button3=0x7f080006;
-        public static final int help=0x7f080005;
-        public static final int keluar=0x7f080003;
-        public static final int lagubaru=0x7f080004;
-        public static final int laguindo=0x7f080007;
-        public static final int laguluar=0x7f080008;
-        public static final int lanjutkan=0x7f080002;
-        public static final int progressBar1=0x7f080009;
-        public static final int tabHost=0x7f080000;
-        public static final int textView1=0x7f080001;
+        public static final int Btn_LaguBarat=0x7f080014;
+        public static final int Btn_LaguBaru=0x7f080013;
+        public static final int Btn_LaguIndo=0x7f080012;
+        public static final int CariLaguBarat=0x7f080009;
+        public static final int CariLaguBaru=0x7f08000c;
+        public static final int CariLaguIndo=0x7f08000f;
+        public static final int Cord=0x7f080008;
+        public static final int EmptyLaguBarat=0x7f08000b;
+        public static final int EmptyLaguBaru=0x7f08000e;
+        public static final int EmptyLaguIndo=0x7f080011;
+        public static final int FrameArti=0x7f080005;
+        public static final int Garis=0x7f080004;
+        public static final int Judul=0x7f080003;
+        public static final int LV_LaguBarat=0x7f08000a;
+        public static final int LV_LaguBaru=0x7f08000d;
+        public static final int LV_LaguIndo=0x7f080010;
+        public static final int MainKeluar=0x7f080002;
+        public static final int MainLanjutkan=0x7f080001;
+        public static final int TabsLaguBarat=0x7f080017;
+        public static final int TabsLaguBaru=0x7f080015;
+        public static final int TabsLaguIndo=0x7f080016;
+        public static final int action_settings=0x7f08001a;
+        public static final int horizontalScrollView=0x7f080006;
+        public static final int imageView1=0x7f080019;
+        public static final int progressBar1=0x7f080018;
+        public static final int textView1=0x7f080000;
+        public static final int verticalScrollView=0x7f080007;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int menu_utama=0x7f030001;
-        public static final int splash_screen=0x7f030002;
+        public static final int cord=0x7f030001;
+        public static final int lagu_barat=0x7f030002;
+        public static final int lagu_baru=0x7f030003;
+        public static final int lagu_indo=0x7f030004;
+        public static final int menu_pilihan=0x7f030005;
+        public static final int menu_tab=0x7f030006;
+        public static final int splash_screen=0x7f030007;
     }
     public static final class menu {
         public static final int main=0x7f070000;

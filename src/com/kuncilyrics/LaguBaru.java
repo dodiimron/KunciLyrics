@@ -1,43 +1,73 @@
 package com.kuncilyrics;
 
-import android.app.ListActivity;
+import java.util.List;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 
-public class LaguBaru extends ListActivity{
+public class LaguBaru extends Activity implements TextWatcher, OnItemClickListener {
+	
+	private EditText carilagubaru;
+	private ListView lvlagubaru;
+	private DBLaguBaru dblbaru;
+	private ArrayAdapter<DefinisiLagu> adapterlagubaru;
+	private List<DefinisiLagu> listLaguBaru;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.lagu_baru);
+		lvlagubaru = (ListView) findViewById(R.id.LV_LaguBaru);
+		lvlagubaru.setEmptyView(findViewById(R.id.EmptyLaguBaru));
+		carilagubaru = (EditText) findViewById(R.id.CariLaguBaru);
 		
-		String[] baru = new String[]{"One Direction - Steal My Girl","Magic! - Rude","Sam Smith - Stay With Me"};
-		this.setListAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,baru));
+		dblbaru = DBLaguBaru.getInstance(this);
+		
+		setDataLaguBaru();
+		
+		carilagubaru.addTextChangedListener(this);
+		lvlagubaru.setOnItemClickListener(this);
 	}
 	
-	protected void onListItemClick(ListView l, View v, int position, long id) {
-		super.onListItemClick(l, v, position, id);
-		Object o = this.getListAdapter().getItem(position);
-		String pilihan = o.toString();
-		tampilkanpilihan(pilihan);
+	private void setDataLaguBaru() {
+		listLaguBaru = dblbaru.getAllLaguBaru();
+		adapterlagubaru = new ArrayAdapter<DefinisiLagu>(this, android.R.layout.simple_expandable_list_item_1, listLaguBaru);
+		lvlagubaru.setAdapter(adapterlagubaru);
 	}
-
-	private void tampilkanpilihan(String pilihan) {
-		try {
-			Intent i = null;
-			if(pilihan.equals("One Direction - Steal My Girl")) {
-				
-			}
-			if(pilihan.equals("Magic! - Rude")) {
-				
-			}
-			if(pilihan.equals("Sam Smith - Stay With Me")) {
-			
-			}
-			startActivity(i);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
+		// TODO Auto-generated method stub
+		Bundle b = new Bundle();
+		b.putString("judul", adapterlagubaru.getItem(position).getJudul());
+		b.putString("cord", adapterlagubaru.getItem(position).getCord());
+		
+		Intent i = new Intent(this, CordLaguBaru.class);
+		i.putExtras(b);
+		startActivity(i);
+	}
+	
+	@Override
+	public void afterTextChanged(Editable s) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void onTextChanged(CharSequence s, int start, int before, int count) {
+		// TODO Auto-generated method stub
+		adapterlagubaru.getFilter().filter(s.toString());		
 	}
 }
