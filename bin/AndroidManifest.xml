@@ -10,13 +10,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/musik"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" android:debuggable="true">
+        android:theme="@style/AppTheme" >
         <activity
-            android:name="com.kuncilyrics.SP"
+            android:name="com.kuncilyrics.SplashScreen"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,11 +24,14 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="MainActivity"></activity>
-        <activity android:name="menuutama"></activity>
-        <activity android:name="Lagubaru" android:label="Lagu Baru"></activity>
-        <activity android:name="Indo" android:label="lagu Indo"></activity>
-        <activity android:name="Luar" android:label="Lagu Luar"></activity>
+        <activity android:name="MainActivity" android:label="Kunci Lyrics"></activity>
+        <activity android:name="MenuTabs" android:label="Menu Utama"></activity>
+        <activity android:name="LaguBaru"></activity>
+        <activity android:name="LaguIndo"></activity>
+        <activity android:name="LaguBarat"></activity>
+        <activity android:name="CordLaguBaru"></activity>
+        <activity android:name="CordLaguIndo"></activity>
+        <activity android:name="CordLaguBarat"></activity>
     </application>
 
 </manifest>
